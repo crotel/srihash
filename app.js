@@ -102,7 +102,7 @@ function displayResult(resultDiv, url, contentType, integrity) {
   }
   const copyButton = `<button id="sri-copy">Copy</button>`;
 
-  console.log("It's working");
+//   console.log("It's working");
   resultDiv.insertAdjacentHTML('afterend', copyButton);
   const sriCopy = document.getElementById("sri-copy");
 
@@ -134,11 +134,11 @@ async function formSubmit(event) {
   const resultDiv = document.getElementById("sri-snippet");
   const errorDiv = document.getElementById("sri-error");
 
-  console.info("Trying", url);
+//   console.info("Trying", url);
   try {
     const response = await fetch(url);
 
-    console.info("Response", response);
+//     console.info("Response", response);
     if (response.status === 200) {
       const type = response.headers.get("content-type");
       const contentType = parseContentType(type);
